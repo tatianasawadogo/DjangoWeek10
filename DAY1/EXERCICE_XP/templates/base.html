@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"  href= "{% static 'webfonts/font-awesome.min.css' %}">
+
+         <!-- Font Awesome -->
+        <link rel="stylesheet" href="{% static 'css/all.css' %}">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <!-- Custom -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+        <title>Gestion immobilier | {% block title %} {% endblock title %}</title>
+        
+    </head>
+    <body>
+        {% include 'nav/navbar.html'  %}
+        {% include 'nav/body.html'  %}
+        {% comment %} {% include 'nav/_alerts.html'  %} {% endcomment %}
+        {% block content %}
+        {% endblock content %}
+
+        {% include 'nav/footer.html'  %}
+       <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+       <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+       <script src="{% static 'js/lightbox.min.js' %}"></script>
+       <script src="{% static 'js/main.js' %}"></script>
+        <script src="" async defer></script>
+        
+    </body>
+    
+</html>
